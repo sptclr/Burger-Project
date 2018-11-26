@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux';
+import ReactAux from '../../hoc/ReactAux';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 
@@ -78,7 +78,7 @@ class BurgerBuilder extends Component {
         }
         // {salad: true, meat: false, ...}
         return (
-            <Aux>
+            <ReactAux>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
                     ingredientAdded={this.addIngredientHandler}
@@ -86,7 +86,7 @@ class BurgerBuilder extends Component {
                     disabled={disabledInfo}
                     purchasable={this.state.purchasable}
                     price={this.state.totalPrice} />
-            </Aux>
+            </ReactAux>
         );
     }
 }
